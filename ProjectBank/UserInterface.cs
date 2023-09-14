@@ -76,12 +76,13 @@ namespace ProjectBank
             Console.WriteLine("inserisci password: ");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - ");
             string password = Console.ReadLine();
-            try
-            {
-                Account account = ControlAccount(username, password, accounts);
-                Menu(counts, username);
+            
+            Account account = ControlAccount(username, password, accounts);
+            if (account != null)
+            { 
+               Menu(counts, username);
             }
-            catch (Exception ex)
+            else
             {
                 Console.WriteLine("utente non trovato o password sbagliata");
                 Console.WriteLine("- - - - - - - - - - - - - - - - - - ");
