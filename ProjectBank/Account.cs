@@ -22,9 +22,9 @@ namespace ProjectBank
             BornDate = bornDate;                     
         }
 
-        public void caricaAccount()
-        {
+        //public void caricaAccount()
+        //{
 
-        }
+        //}
     }
 }
