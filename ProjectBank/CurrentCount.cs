@@ -13,7 +13,7 @@ namespace ProjectBank
         public string Iban { get; set; }
         public Account Account { get; set; }
         
-        private DateTime Now = DateTime.Now;
+        
 
         public CurrentCount(Account account,double money, string iban)
         {
@@ -24,6 +24,7 @@ namespace ProjectBank
 
         public void Prelievo(CurrentCount count)
         {
+            DateTime Now = DateTime.Now;
             Console.WriteLine("inserire saldo da prelevare");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - ");
             double saldo = double.Parse(Console.ReadLine());
@@ -44,6 +45,7 @@ namespace ProjectBank
 
         public void Deposito(CurrentCount count)
         {
+            DateTime Now = DateTime.Now;
             Console.WriteLine("inserire saldo da versare");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - ");
             double saldo = double.Parse(Console.ReadLine());
@@ -84,7 +86,8 @@ namespace ProjectBank
         } */
         
         public void Saldo(CurrentCount count)
-        {            
+        {
+            DateTime Now = DateTime.Now;
             Console.WriteLine($"saldo disponibile: {count.Money} {Coin.EURO}");
             Console.WriteLine("- - - - - - - - - - - - - - - - - - ");
             Console.WriteLine($"data: {Now}");
